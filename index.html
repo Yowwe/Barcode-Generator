@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Barcode Generator</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    <!-- JsBarcode CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Barc <i class="fab fa-osi"></i>de</a>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="form-group">
+                    <label for="barcodeInput">Enter Text:</label>
+                    <textarea class="form-control" id="barcodeInput" rows="5"></textarea>
+                </div>
+                <button class="btn btn-danger btn-lg" onclick="generateBarcode()">Generate Barcodes</button>
+            </div>
+        </div>
+
+        <div id="barcodeContainer" class="row mt-3">
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6 mx-auto text-center">
+                <a href="#" class="btn btn-danger btn-lg" id="downloadAllBtn" onclick="downloadAllBarcodes()">Download All Barcodes</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap, Popper.js, Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <!-- JsBarcode JS -->
+    <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
+
+    <!-- JSZip library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
